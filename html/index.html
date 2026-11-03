@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        :root{
+            --var-bg-blue : #0088cc;
+        }
+
+        .container{
+            width: 80dvw;
+            padding: 60px;
+            margin: 60px;
+            border: solid #34343470 0.4px;
+        }
+
+        .card{
+            width: 320px;
+            height: 120px;
+            padding: 8px;
+            margin: 8px;
+            border: solid 0.4px #34343470;
+        }
+        .bg-blue{
+            background-color: var(--var-bg-blue);
+        }
+
+        .bg-image{
+            background-image: linear-gradient(to right, #35353580),
+            url('https://img.magnific.com/free-photo/simple-mountains-landscape_1398-1111.jpg?semt=ais_hybrid&w=740&q=80');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .bg-gradient{
+            background: linear-gradient(to top right, #0088cc, #aae3ff);
+        }
+
+        .text-white{
+            color: #ffffff;
+        }
+
+        .d-block{
+            display: block;
+        }
+
+        .d-inline{
+            display: inline;
+        }
+
+        .d-inline-block{
+            display: inline-block;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="card bg-blue">
+        </div>
+        <div class="card bg-image">
+            <h2 class="text-white">Ini adalah card</h2>
+        </div>
+        <div class="card bg-gradient"></div>
+    </div>
+
+
+    <div class="container">
+        <h2>Display block</h2>
+        <p>Karakter display block : </p>
+        <ul>
+            <li>Ukuran bisa diubah (width dan height)</li>
+            <li>bisa atur padding dan margin</li>
+        </ul>
+        <div class="card bg-blue">card div</div>
+        <div class="card bg-blue">card div</div>
+        <div class="card bg-blue">card div</div>
+
+        <span class="card bg-blue d-block">card span</span>
+        <span class="card bg-blue d-block">card span</span>
+        <span class="card bg-blue d-block">card span</span>
+    </div>
+
+    <div class="container">
+        <h2>Display Inline</h2>
+        <p>Karakter display inline : </p>
+        <ul>
+            <li>Ukuran tidak bisa diubah (width dan height)</li>
+            <li>padding berlaku, margin hanya margin-x yang berlaku.</li>
+        </ul>
+
+        <div class="card bg-blue d-inline">Lorem ipsum dolor sit amet.</div>
+        <div class="card bg-blue d-inline">card div</div>
+        <span class="card bg-blue">card span</span>
+        <span class="card bg-blue">card span</span>
+    </div>
+
+    <div class="container">
+        <h2>Display Inline Block</h2>
+        <p>Karakter display inline : </p>
+        <ul>
+            <li>Ukuran bisa diubah (width dan height)</li>
+            <li>padding dan margin berlaku.</li>
+            <li>membuat component baru ke samping</li>
+        </ul>
+
+        <div class="card bg-blue d-inline-block">Lorem ipsum dolor sit amet.</div>
+        <div class="card bg-blue d-inline-block">card div</div>
+        <span class="card bg-blue d-inline-block">card span</span>
+        <span class="card bg-blue d-inline-block">card span</span>
+    </div>
+
+</body>
+</html>
