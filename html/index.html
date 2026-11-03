@@ -107,16 +107,15 @@
         margin: 8px;
       }
 
-      .d-flex{
+      .d-flex {
         display: flex;
-        background-color: #aae3ff;
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
         gap: 10px;
       }
 
-      .card-flex{
+      .card-flex {
         background-color: #0088cc;
         padding: 20px;
         flex-basis: 100px;
@@ -124,8 +123,28 @@
         flex-grow: 1;
       }
 
-      .d-flex li{
+      .d-flex li {
         list-style: none;
+      }
+
+      .navbar-flex {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .d-grid{
+        display: grid;
+        gap: 10px;
+      }
+
+      .col-3{
+        grid-template-columns: 1fr 2fr 1fr;
+      }
+
+      .card-grid{
+        padding: 20px;
+        border: 0.4px solid #34343470;
       }
 
     </style>
@@ -191,30 +210,34 @@
     </div>
 
     <div class="container bg-blue sticky">
-      <h2>Navbar display inline</h2>
-      <ul>
-        <li class="d-inline-block nav-inline"><a href="">Home</a></li>
-        <li class="d-inline-block nav-inline"><a href="">Cart</a></li>
-        <li class="d-inline-block nav-inline"><a href="">Promo</a></li>
-        <li class="d-inline-block nav-inline"><a href="">Account</a></li>
-      </ul>
+      <div class="navbar-flex">
+        <h2>Navbar display inline</h2>
+        <ul>
+          <li class="d-inline-block nav-inline"><a href="">Home</a></li>
+          <li class="d-inline-block nav-inline"><a href="">Cart</a></li>
+          <li class="d-inline-block nav-inline"><a href="">Promo</a></li>
+          <li class="d-inline-block nav-inline"><a href="">Account</a></li>
+        </ul>
+      </div>
     </div>
 
     <div class="container bg-blue sticky">
-      <h2>Navbar dengan flexbox</h2>
-      <ul class="d-flex">
-        <li class="nav-inline"><a href="">Home</a></li>
-        <li class="nav-inline"><a href="">Cart</a></li>
-        <li class="nav-inline"><a href="">Promo</a></li>
-        <li class="nav-inline"><a href="">Account</a></li>
-      </ul>
+      <div class="navbar-flex">
+        <h2>Navbar dengan flexbox</h2>
+        <ul class="d-flex">
+          <li class="nav-inline"><a href="">Home</a></li>
+          <li class="nav-inline"><a href="">Cart</a></li>
+          <li class="nav-inline"><a href="">Promo</a></li>
+          <li class="nav-inline"><a href="">Account</a></li>
+        </ul>
+      </div>
     </div>
 
     <div class="container d-flex">
-        <div class="card-flex"></div>
-        <div class="card-flex"></div>
-        <div class="card-flex"></div>
-        <div class="card-flex"></div>
+      <div class="card-flex"></div>
+      <div class="card-flex"></div>
+      <div class="card-flex"></div>
+      <div class="card-flex"></div>
     </div>
     <div class="container">
       <h2>Position Relative</h2>
@@ -246,6 +269,18 @@
         <p>IDR. 500,000</p>
         <img src="discount.svg" class="discount" alt="discount" width="50" />
       </div>
+    </div>
+
+    <div class="container d-grid col-3">
+        <div class="card-grid"></div>
+        <div class="card-grid"></div>
+        <div class="card-grid"></div>
+        <div class="card-grid"></div>
+        <div class="card-grid"></div>
+        <div class="card-grid"></div>
+        <div class="card-grid"></div>
+        <div class="card-grid"></div>
+        <div class="card-grid"></div>
     </div>
 
     <div class="askme">
