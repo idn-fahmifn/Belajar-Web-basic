@@ -17,7 +17,7 @@
         --var-bg-blue: #0088cc;
       }
 
-      *{
+      * {
         font-family: "Poppins", sans-serif;
       }
 
@@ -86,7 +86,7 @@
         right: 0;
       }
 
-      .askme{
+      .askme {
         width: 80px;
         padding: 8px 16px;
         background: #aae3ff;
@@ -97,6 +97,36 @@
         right: 20px;
       }
 
+      .sticky {
+        position: sticky;
+        top: 10px;
+        z-index: 10;
+      }
+
+      .nav-inline {
+        margin: 8px;
+      }
+
+      .d-flex{
+        display: flex;
+        background-color: #aae3ff;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .card-flex{
+        background-color: #0088cc;
+        padding: 20px;
+        flex-basis: 100px;
+        flex-shrink: 1;
+        flex-grow: 1;
+      }
+
+      .d-flex li{
+        list-style: none;
+      }
 
     </style>
   </head>
@@ -156,6 +186,36 @@
       <span class="card bg-blue d-inline-block">card span</span>
     </div>
 
+    <div class="container bg-blue sticky">
+      <h2>Position Sticky</h2>
+    </div>
+
+    <div class="container bg-blue sticky">
+      <h2>Navbar display inline</h2>
+      <ul>
+        <li class="d-inline-block nav-inline"><a href="">Home</a></li>
+        <li class="d-inline-block nav-inline"><a href="">Cart</a></li>
+        <li class="d-inline-block nav-inline"><a href="">Promo</a></li>
+        <li class="d-inline-block nav-inline"><a href="">Account</a></li>
+      </ul>
+    </div>
+
+    <div class="container bg-blue sticky">
+      <h2>Navbar dengan flexbox</h2>
+      <ul class="d-flex">
+        <li class="nav-inline"><a href="">Home</a></li>
+        <li class="nav-inline"><a href="">Cart</a></li>
+        <li class="nav-inline"><a href="">Promo</a></li>
+        <li class="nav-inline"><a href="">Account</a></li>
+      </ul>
+    </div>
+
+    <div class="container d-flex">
+        <div class="card-flex"></div>
+        <div class="card-flex"></div>
+        <div class="card-flex"></div>
+        <div class="card-flex"></div>
+    </div>
     <div class="container">
       <h2>Position Relative</h2>
 
@@ -189,8 +249,7 @@
     </div>
 
     <div class="askme">
-        <a href="">Ask Me</a>
+      <a href="">Ask Me</a>
     </div>
-
   </body>
 </html>
