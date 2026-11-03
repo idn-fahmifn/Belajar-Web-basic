@@ -1,119 +1,178 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
+      :root {
+        --var-bg-blue: #0088cc;
+      }
 
-        :root{
-            --var-bg-blue : #0088cc;
-        }
+      *{
+        font-family: "Poppins", sans-serif;
+      }
 
-        .container{
-            width: 80dvw;
-            padding: 60px;
-            margin: 60px;
-            border: solid #34343470 0.4px;
-        }
+      .container {
+        width: 80dvw;
+        padding: 60px;
+        margin: 60px;
+        border: solid #34343470 0.4px;
+      }
 
-        .card{
-            width: 320px;
-            height: 120px;
-            padding: 8px;
-            margin: 8px;
-            border: solid 0.4px #34343470;
-        }
-        .bg-blue{
-            background-color: var(--var-bg-blue);
-        }
+      .card {
+        width: 320px;
+        height: 120px;
+        padding: 8px;
+        margin: 8px;
+        border: solid 0.4px #34343470;
+      }
+      .bg-blue {
+        background-color: var(--var-bg-blue);
+      }
 
-        .bg-image{
-            background-image: linear-gradient(to right, #35353580),
-            url('https://img.magnific.com/free-photo/simple-mountains-landscape_1398-1111.jpg?semt=ais_hybrid&w=740&q=80');
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
+      .bg-red {
+        background-color: #ff0000;
+      }
 
-        .bg-gradient{
-            background: linear-gradient(to top right, #0088cc, #aae3ff);
-        }
+      .bg-image {
+        background-image:
+          linear-gradient(to right, #35353580),
+          url("https://img.magnific.com/free-photo/simple-mountains-landscape_1398-1111.jpg?semt=ais_hybrid&w=740&q=80");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
 
-        .text-white{
-            color: #ffffff;
-        }
+      .bg-gradient {
+        background: linear-gradient(to top right, #0088cc, #aae3ff);
+      }
 
-        .d-block{
-            display: block;
-        }
+      .text-white {
+        color: #ffffff;
+      }
 
-        .d-inline{
-            display: inline;
-        }
+      .d-block {
+        display: block;
+      }
 
-        .d-inline-block{
-            display: inline-block;
-        }
+      .d-inline {
+        display: inline;
+      }
 
+      .d-inline-block {
+        display: inline-block;
+      }
+
+      .d-none {
+        display: none;
+      }
+
+      .relative {
+        position: relative;
+      }
+
+      .discount {
+        padding: 8px;
+        position: absolute;
+        top: -15px;
+        right: 0;
+      }
     </style>
-
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="card bg-blue">
-        </div>
-        <div class="card bg-image">
-            <h2 class="text-white">Ini adalah card</h2>
-        </div>
-        <div class="card bg-gradient"></div>
-    </div>
-
-
-    <div class="container">
-        <h2>Display block</h2>
-        <p>Karakter display block : </p>
-        <ul>
-            <li>Ukuran bisa diubah (width dan height)</li>
-            <li>bisa atur padding dan margin</li>
-        </ul>
-        <div class="card bg-blue">card div</div>
-        <div class="card bg-blue">card div</div>
-        <div class="card bg-blue">card div</div>
-
-        <span class="card bg-blue d-block">card span</span>
-        <span class="card bg-blue d-block">card span</span>
-        <span class="card bg-blue d-block">card span</span>
+      <div class="card bg-blue"></div>
+      <div class="card bg-image">
+        <h2 class="text-white">Ini adalah card</h2>
+      </div>
+      <div class="card bg-gradient"></div>
     </div>
 
     <div class="container">
-        <h2>Display Inline</h2>
-        <p>Karakter display inline : </p>
-        <ul>
-            <li>Ukuran tidak bisa diubah (width dan height)</li>
-            <li>padding berlaku, margin hanya margin-x yang berlaku.</li>
-        </ul>
+      <h2>Display block</h2>
+      <p>Karakter display block :</p>
+      <ul>
+        <li>Ukuran bisa diubah (width dan height)</li>
+        <li>bisa atur padding dan margin</li>
+      </ul>
+      <div class="card bg-blue">card div 1</div>
+      <div class="card bg-blue d-none">card div 2</div>
+      <div class="card bg-blue">card div 3</div>
 
-        <div class="card bg-blue d-inline">Lorem ipsum dolor sit amet.</div>
-        <div class="card bg-blue d-inline">card div</div>
-        <span class="card bg-blue">card span</span>
-        <span class="card bg-blue">card span</span>
+      <span class="card bg-blue d-block">card span 1</span>
+      <span class="card bg-blue d-block" style="visibility: hidden"
+        >card span 2</span
+      >
+      <span class="card bg-blue d-block">card span 3</span>
     </div>
 
     <div class="container">
-        <h2>Display Inline Block</h2>
-        <p>Karakter display inline : </p>
-        <ul>
-            <li>Ukuran bisa diubah (width dan height)</li>
-            <li>padding dan margin berlaku.</li>
-            <li>membuat component baru ke samping</li>
-        </ul>
+      <h2>Display Inline</h2>
+      <p>Karakter display inline :</p>
+      <ul>
+        <li>Ukuran tidak bisa diubah (width dan height)</li>
+        <li>padding berlaku, margin hanya margin-x yang berlaku.</li>
+      </ul>
 
-        <div class="card bg-blue d-inline-block">Lorem ipsum dolor sit amet.</div>
-        <div class="card bg-blue d-inline-block">card div</div>
-        <span class="card bg-blue d-inline-block">card span</span>
-        <span class="card bg-blue d-inline-block">card span</span>
+      <div class="card bg-blue d-inline">Lorem ipsum dolor sit amet.</div>
+      <div class="card bg-blue d-inline">card div</div>
+      <span class="card bg-blue">card span</span>
+      <span class="card bg-blue">card span</span>
     </div>
 
-</body>
+    <div class="container">
+      <h2>Display Inline Block</h2>
+      <p>Karakter display inline :</p>
+      <ul>
+        <li>Ukuran bisa diubah (width dan height)</li>
+        <li>padding dan margin berlaku.</li>
+        <li>membuat component baru ke samping</li>
+      </ul>
+
+      <div class="card bg-blue d-inline-block">Lorem ipsum dolor sit amet.</div>
+      <div class="card bg-blue d-inline-block">card div</div>
+      <span class="card bg-blue d-inline-block">card span</span>
+      <span class="card bg-blue d-inline-block">card span</span>
+    </div>
+
+    <div class="container">
+      <h2>Position Relative</h2>
+
+      <div class="card bg-red relative" style="top: 200px; z-index: 2">
+        Card Div 1
+      </div>
+      <div class="card bg-blue relative" style="top: 160px; z-index: 1">
+        Card Div 2
+      </div>
+      <div class="card bg-blue relative" style="top: 100px">Card Div 3</div>
+      <div class="card bg-blue">Card Div</div>
+    </div>
+
+    <div class="container">
+      <h2>position absolute</h2>
+      <div class="card bg-gradient relative">
+        <h3>Nama Produk</h3>
+        <p>IDR. 500,000</p>
+        <img src="discount.svg" class="discount" alt="discount" width="50" />
+      </div>
+      <div class="card bg-gradient relative">
+        <h3>Nama Produk</h3>
+        <p>IDR. 500,000</p>
+        <img src="discount.svg" class="discount" alt="discount" width="50" />
+      </div>
+      <div class="card bg-gradient relative">
+        <h3>Nama Produk</h3>
+        <p>IDR. 500,000</p>
+        <img src="discount.svg" class="discount" alt="discount" width="50" />
+      </div>
+    </div>
+  </body>
 </html>
