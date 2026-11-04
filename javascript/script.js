@@ -37,24 +37,47 @@ console.log(
 saya berasal dari ${biodata.asal}`,
 );
 
-let nilai = Number(prompt("Masukan nilai"));
-console.log(nilai)
-
+let nilai = 78;
+console.log(nilai);
 
 if (nilai > 100) {
-  alert("Input yang kamu masukan jangan lebih dari 100");
+  console.log("Input yang kamu masukan jangan lebih dari 100");
 } else if (nilai < 0) {
-  alert("Input yang kamu masukan jangan kurang dari 0");
+  console.log("Input yang kamu masukan jangan kurang dari 0");
 } else {
   if (nilai >= 80) {
-    alert("Predikat kamu A+");
+    console.log("Predikat kamu A+");
   } else if (nilai >= 78) {
-    alert("Predikat kamu B");
+    console.log("Predikat kamu B");
   } else if (nilai >= 70) {
-    alert("Nilai kamu cukup");
-  } else if(nilai > 0){
-    alert("kamu harus remedial");
+    console.log("Nilai kamu cukup");
+  } else if (nilai > 0) {
+    console.log("kamu harus remedial");
   } else {
-    alert("Kamu salah input")
+    console.log("Kamu salah input");
   }
+}
+
+let day = prompt("masukan hari..");
+
+switch (day.toLowerCase()) {
+  case "jumat":
+    alert("Kamu WFH");
+    break;
+
+  case "sabtu":
+  case "minggu":
+    alert("Hari libur");
+    break;
+
+  case "senin":
+  case "selasa":
+  case "rabu":
+  case "kamis":
+    alert("Hari Kerja");
+    break;
+
+  default:
+    alert("Hari yang kamu masukan salah.")
+    break;
 }
