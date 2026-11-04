@@ -95,6 +95,7 @@
         position: fixed;
         bottom: 20px;
         right: 20px;
+        animation: bounce 1s;
       }
 
       .sticky {
@@ -191,6 +192,15 @@
 
       .col {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+
+      @keyframes bounce {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(-100px);
+        }
       }
 
       /* responsive ukuran 768px */
