@@ -12,6 +12,9 @@
       rel="stylesheet"
     />
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <style>
       :root {
         --var-bg-blue: #0088cc;
@@ -95,7 +98,7 @@
         position: fixed;
         bottom: 20px;
         right: 20px;
-        animation: bounce 1s;
+        animation: bounce 1s infinite alternate;
       }
 
       .sticky {
@@ -246,7 +249,7 @@
   <body>
     <div class="container">
       <div class="card bg-blue"></div>
-      <div class="card bg-image">
+      <div class="card bg-image" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
         <h2 class="text-white">Ini adalah card</h2>
       </div>
       <div class="card bg-gradient"></div>
@@ -278,7 +281,8 @@
         <li>padding berlaku, margin hanya margin-x yang berlaku.</li>
       </ul>
 
-      <div class="card bg-blue d-inline">Lorem ipsum dolor sit amet.</div>
+      <div class="card bg-blue d-inline" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">Lorem ipsum dolor sit amet.</div>
       <div class="card bg-blue d-inline">card div</div>
       <span class="card bg-blue">card span</span>
       <span class="card bg-blue">card span</span>
@@ -294,7 +298,8 @@
       </ul>
 
       <div class="card bg-blue d-inline-block">Lorem ipsum dolor sit amet.</div>
-      <div class="card bg-blue d-inline-block">card div</div>
+      <div class="card bg-blue d-inline-block" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">card div</div>
       <span class="card bg-blue d-inline-block">card span</span>
       <span class="card bg-blue d-inline-block">card span</span>
     </div>
@@ -402,5 +407,9 @@
       <div class="card-grid"></div>
       <div class="card-grid"></div>
     </div>
+
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
