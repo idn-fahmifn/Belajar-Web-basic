@@ -58,26 +58,157 @@ if (nilai > 100) {
   }
 }
 
-let day = prompt("masukan hari..");
+let day = "senin";
 
 switch (day.toLowerCase()) {
   case "jumat":
-    alert("Kamu WFH");
+    console.log("Kamu WFH");
     break;
 
   case "sabtu":
   case "minggu":
-    alert("Hari libur");
+    console.log("Hari libur");
     break;
 
   case "senin":
   case "selasa":
   case "rabu":
   case "kamis":
-    alert("Hari Kerja");
+    console.log("Hari Kerja");
     break;
 
   default:
-    alert("Hari yang kamu masukan salah.")
+    console.log("Hari yang kamu masukan salah.");
     break;
+}
+
+let nilai1 = 10;
+let nilai2 = 30;
+let nilai3 = "10";
+let bebas = "terserah";
+
+console.log(nilai1 + nilai3);
+console.log(nilai1 * nilai3);
+console.log(nilai1 * bebas);
+
+console.log(NaN === NaN);
+
+console.log(nilai1 == nilai2); //false
+console.log(nilai1 != nilai3); //true karena sesama 10 (nilainya)
+console.log(nilai1 !== nilai3); //false
+
+let kerja = true;
+let libur = false;
+let cuti = false;
+let hiling = true;
+
+console.log(kerja || cuti); //true
+console.log(kerja && hiling); //true
+console.log(libur && cuti); //false
+
+for (let i = 0; i < 20; i++) {
+  if (i === 9) {
+    continue;
+  }
+
+  if (i === 15) {
+    break;
+  }
+
+  console.log("Saya sedang mengulang..." + i);
+}
+
+// silakan looping angka 1 - 30.
+
+for (let i = 20; i > 5; i--) {
+  console.log("Saya sedang mundur..." + i);
+}
+
+let cars = ["byd", "xenia", "pajero", "wulling", "jaeco", "xpander", "beat"];
+cars.forEach((car) => console.log("Mobil saya adalah : ", car));
+
+for (let i = 0; i < cars.length; i++) {
+  console.log("Mobil di garasi : ", cars[i]);
+}
+
+function auth() {
+  let currentPassword = "belajarjs";
+  let inputPassword = prompt("masukan password anda..");
+
+  while (currentPassword !== inputPassword) {
+    alert("Password salah");
+    inputPassword = prompt("masukan password anda..");
+  }
+
+  alert("password anda sesuai");
+}
+
+// fungsi clasic
+
+function namaFungsi1() {
+  // masukan kodenya disini
+}
+
+let fungsi = function () {};
+
+let nama_fungsi = () => {};
+
+function penjumlahan(a, b) {
+  console.log(a + b);
+}
+
+penjumlahan(10, 30);
+
+// membuat fungsi diskon
+
+let diskon = (harga, disc) => {
+  potongan = harga - harga * (disc / 100);
+  return potongan;
+};
+
+function showDisc() {
+  let harga = Number(prompt("Masukan Harga : "));
+  let potongan = Number(prompt("Masukan Potongan : "));
+
+  let hasil = diskon(harga, potongan);
+
+  alert(`discount ${potongan}% dari ${harga} adalah ${hasil}`);
+}
+
+//  mas Bagus = menghitung luas persegi panjang
+// mas Deny = ada pilihan : luas / keliling Lingkaran
+// Mas imam = luas trapesium
+// bu diah = luas jajargenjang
+// pak thom = luas segitiga
+
+let luas = (sisi) => {
+  let lu = sisi * sisi; 
+  return lu;
+}
+
+let keliling = (sisi) => {
+  let kel = 4 * sisi;
+  return kel;
+}
+
+function persegi() {
+  let inputSisi = prompt("masukan sisi : ");
+  let rumus = prompt("masukan rumus 1 = luas, 2 = keliling ");
+  let hasil; //undifined
+
+  switch (rumus) {
+    case "1": 
+      hasil = luas(Number(inputSisi)); 
+      alert(`Luas persegi dengan sisi = ${inputSisi} adalah ${hasil}`);
+      break;
+
+    case "2":
+      hasil = keliling(Number(inputSisi));
+      alert(`keliling persegi dengan sisi = ${inputSisi} adalah ${hasil}`);
+      break;
+
+    default:
+      alert("Rumus tidak ditemukan.");
+      break;
+  }
 }
