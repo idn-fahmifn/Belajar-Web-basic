@@ -182,14 +182,14 @@ function showDisc() {
 // pak thom = luas segitiga
 
 let luas = (sisi) => {
-  let lu = sisi * sisi; 
+  let lu = sisi * sisi;
   return lu;
-}
+};
 
 let keliling = (sisi) => {
   let kel = 4 * sisi;
   return kel;
-}
+};
 
 function persegi() {
   let inputSisi = prompt("masukan sisi : ");
@@ -197,8 +197,8 @@ function persegi() {
   let hasil; //undifined
 
   switch (rumus) {
-    case "1": 
-      hasil = luas(Number(inputSisi)); 
+    case "1":
+      hasil = luas(Number(inputSisi));
       alert(`Luas persegi dengan sisi = ${inputSisi} adalah ${hasil}`);
       break;
 
@@ -212,3 +212,59 @@ function persegi() {
       break;
   }
 }
+
+const judul = document.getElementById("judulHalaman");
+const subTitle = document.querySelector(".sub-title");
+
+judul.innerHTML = `<span>belajar js</span>`;
+judul.textContent = "Ini adalah content yang diubah";
+
+subTitle.style.color = "#ffff";
+subTitle.classList.add("bg-primary", "second-class");
+subTitle.classList.remove("sub-title");
+subTitle.textContent = "berubah ga?";
+
+console.log(judul);
+console.log(subTitle);
+
+const score = document.getElementById("counter");
+const tambah = document.getElementById("tambah");
+const kurang = document.getElementById("kurang");
+let count = 0;
+
+if (count === 0) {
+  kurang.disabled = true;
+}
+
+tambah.addEventListener("click", () => {
+  count += 1;
+  score.textContent = count;
+  kurang.disabled = false;
+});
+
+kurang.addEventListener("click", () => {
+  count -= 1;
+  score.textContent = count;
+
+  if (count === 0) {
+    kurang.disabled = true;
+  }
+});
+
+async function getData() {
+  try {
+    // mencoba menjalankan
+
+    const api = "https://6aec1ec8ee39618d7bf8ee28.mockapi.io/api/v1/products"
+    const res = await fetch(api)
+    const data = await res.json()
+
+    console.log(data)
+
+  } catch (error) {
+    // memberitahu kalau gagal memuat sebuah data.
+    console.log("Error", error)
+  }
+}
+
+
